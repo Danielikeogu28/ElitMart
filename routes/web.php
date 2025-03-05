@@ -53,8 +53,8 @@ require __DIR__ . '/auth.php';
 
 
 
-Route::middleware(['auth', 'admin'])->group(function () {
+//Route::middleware(['auth', 'admin'])->group(function () {
 
     Route::get('/admin-dashboard', [ProductController::class, 'index'])->name('dashboard');
     Route::resource('products', ProductController::class);
-});
+//});

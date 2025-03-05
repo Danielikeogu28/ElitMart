@@ -2,19 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Middleware\IsAdminMiddleware;
 use App\Http\Requests\ProductStoreRequest;
 use App\Http\Requests\ProductUpdateRequest;
 use App\Models\Product;
 use App\Models\ProductColor;
 use App\Models\ProductImage;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controllers\HasMiddleware;
+use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Support\Facades\File;
 
-class ProductController extends Controller
+class ProductController extends Controller implements HasMiddleware
 {
+    public static function middleware() {
+        return [new Middleware(IsAdminMiddleware::class)];
+    }
     /**
      * Display a listing of the resource.
-     */
+     */  
     public function index()
     {
 

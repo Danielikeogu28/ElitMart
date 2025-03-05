@@ -17,7 +17,11 @@ class IsAdminMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         if (Auth::check() && Auth::user()-> role !== 'admin') {
-            return redirect('/')->with(['message' => 'Unauthorized'], 401);
+
+            notyf('Unauthorized access');
+            return redirect('/');
+            
+            
         }
         return $next($request);
     }

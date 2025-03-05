@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
 </head>
+
 <body>
     @include('layouts.navbar')
 
@@ -25,25 +26,28 @@
 
     {{ $scripts ?? '' }}
 
-   
-     <!--jquery library js-->
-     <script src="{{ asset('assets/js/jquery-3.7.1.min.js') }}"></script>
-     <!--bootstrap js-->
-     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
-     <!--font-awesome js-->
-     <script src="{{ asset('assets/js/Font-Awesome.js') }}"></script>
-     <script src="{{ asset('assets/js/slick.min.js') }}"></script>
-     <script src="{{ asset('assets/js/select2.min.js') }}"></script>
-     <!--main/custom js-->
-     <script src="{{ asset('assets/js/main.js') }}"></script>
+    
 
-     <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
 
-     <script>
+
+    <!--jquery library js-->
+    <script src="{{ asset('assets/js/jquery-3.7.1.min.js') }}"></script>
+    <!--bootstrap js-->
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    <!--font-awesome js-->
+    <script src="{{ asset('assets/js/Font-Awesome.js') }}"></script>
+    <script src="{{ asset('assets/js/slick.min.js') }}"></script>
+    <script src="{{ asset('assets/js/select2.min.js') }}"></script>
+    <!--main/custom js-->
+    <script src="{{ asset('assets/js/main.js') }}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+
+    <script>
         var notyf = new Notyf();
     </script>
 
- 
+
 </body>
 
 </html>
