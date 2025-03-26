@@ -20,9 +20,9 @@ class IsAdminMiddleware
 
             notyf('Unauthorized access');
             return redirect('/');
-            
-            
+
         }
+
         return $next($request);
     }
 }
