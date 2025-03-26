@@ -7,7 +7,7 @@
                  <div class="wsus__product_item">
                      <div class="img">
                          <a href="{{ route('detail', $product->id) }}"><img src="{{ asset($product->image) }}" alt="equipment" class="img-fluid w-100"></a>
-                         <a href="{{ route('add-to-cart', $product->id) }}" class="add_cart">
+                         <a href="{{ route('detail', $product->id) }}" class="add_cart">
                              <span><img src="{{ asset('assets/images/cart_icon_black.svg') }}" alt="cart" class="img-fluid w-100"></span>
                              Add To Cart
                          </a>
